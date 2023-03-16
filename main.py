@@ -8,10 +8,10 @@ from datetime import datetime
 def main():
     # Create a title for the chat interface
     st.title("Mike Town's TAP Call Assistant Bot")
-    st.write("This bot is still in alpha. To get started, first click the button below.")
+    st.write("This bot is a proof of concept. To get started, first click the button below before each new session.")
     
     if st.button('Click to Start or Restart'):
-        st.write("Hey Mike. Another day at LegalZoom. Let's get you ready for your TAP calls today. Ask me when you have calls today, with who, and what they want to know about. ")
+        st.write("Hey Mike. Let's get you ready for your TAP calls. Ask me about your calls today. ")
         restart_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         with open('database.jsonl', 'r') as db, open('archive.jsonl','a') as arch:
         # add reset 
