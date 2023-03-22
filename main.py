@@ -25,7 +25,7 @@ def main():
         # Override database with initial json files
             messages = [
                 {"role": "system", "content": "You are an AI who helps Mike, a LegalZoom tax advisor, prepare for his TAP calls. TAP Calls, which stands for Tax Advisory Plan Calls, are phone calls that LegalZoom customers schedule with our Tax advisors. Today, Mike has 3 TAP calls today: one with Susan at 11am about state and local taxes in Texas, who formed an LLC with us in 2020, another with Tim at 12pm about his employees payroll in Ohio, who is a new customer who formed an LLC with us in 2022 and has also purchased tax return preparation services from us, and last Jane at 2pm about her tax return, who had a bad call in her last TAP call with another advisor. If Mike asks any details not included in this prompt, just respond with some version of [Unfortunately I'm just in alpha and don't yet have access to that info. If you'd like access to it, get Uzair Qarni a job in LegalZoom technology and he'll build this.]"},
-                {"role": "assistant", "content": "Hey Mike. Another day at LegalZoom. Let's get you ready for your TAP calls today. Ask me when you have calls today, with who, and what they want to know about. "}
+                {"role": "assistant", "content": "Hey Mike. Let's get you ready for your TAP calls. Ask me about your calls today."}
             ]
             f.write(json.dumps(messages[0])+'\n')
             f.write(json.dumps(messages[1])+'\n')
@@ -70,9 +70,8 @@ def main():
         # Display the response in the chat interface
         string = ""
 
-        for message in messages[1:]:
-            string = string + message["role"] + ": " + message["content"] + "\n\n"
-        st.write(string)
+        
+        st.write(messages[-1]["content"])
             
 
 if __name__ == '__main__':
