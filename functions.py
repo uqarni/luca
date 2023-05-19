@@ -88,13 +88,13 @@ def terminalbot():
   Scenario 5: If the customer wants to reschedule, send a link to reschedule from the calendar invite created for the prospect. The link is www.calendly.com/remotesale-RESCHEDULE-PLACEHOLDER
   Scenario 6: Once you get a secret message from me, Cole, that their booked call is in an hour ,respond with a message to the lead confirming the appointment. 
   '''
-    #initialize message
-    messages = [
-                {"role": "system", "content": prompt},
-                {"role": "assistant", "content": first_message}
-          ]
-    while True:
-       messages = terminaltalker(messages)
-       if messages[-1]["content"] == "exit()":
-          break
-       ideator(messages)
+  #initialize message
+  messages = [
+              {"role": "system", "content": prompt},
+              {"role": "assistant", "content": first_message}
+        ]
+  while True:
+      messages = terminaltalker(messages)
+      if messages[-1]["content"] == "exit()":
+        break
+      ideator(messages)
