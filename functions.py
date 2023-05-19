@@ -35,8 +35,7 @@ def terminaltalker(messages):
 
 #starts terminal conversation. Respond with exit() to exit. 
 def terminalbot():
-  first_message = 
-  '''
+  first_message = '''
   Hey [NAME] - Pat here from Cole Gordon's Remote Closing Academy. I saw you were potentially considering getting into remote closing.
   Are you still looking into doing that?
   Let me know, I might have a few resources I can send over or help point you in the right direction.
